@@ -1,0 +1,26 @@
+@import 'bootstrap';
+
+.navbar {
+    height: 200px; 
+  }
+  
+  .nav-link {
+    font-size: 1.2rem; 
+  }
+  
+  .linee {
+    width: 1px;
+    height: 24px;
+    background-color: #000; 
+    margin: 0 10px; 
+    align-self: center; 
+  }
+  
+  .navbar-brand img {
+    max-height: 100%;
+  }
+  
+  .video {
+    width: 100%;
+    height: auto;
+  }
