@@ -1,26 +1,76 @@
 @import 'bootstrap';
 
-.navbar {
-    height: 200px; 
-  }
-  
-  .nav-link {
-    font-size: 1.2rem; 
-  }
-  
-  .linee {
-    width: 1px;
-    height: 24px;
-    background-color: #000; 
-    margin: 0 10px; 
-    align-self: center; 
-  }
-  
-  .navbar-brand img {
-    max-height: 100%;
-  }
-  
-  .video {
+
+
+:root {
+    --BtnColor: #0D4172;
+    --BtnHover: #0075e2;
+}
+*{
+    color: var(--BtnColor);
+}
+.customSize{
+    width: 25px;
+    height: 25px;
+    margin-bottom: 3px;
+}
+.btnColor{
+    background-color: var(--BtnColor);
+}
+.btnCostum {
+    background-color: var(--BtnColor);
+    width: 30rem;
+    margin-top: 100px;
+}
+.btnColor:hover{
+    background-color: var(--BtnHover);
+}
+video {
+    max-width: 100%;
+}
+
+/*CAARDS*/
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    position: relative;
+}
+
+.card-custom {
+    width: 500px;
+    border: 1px solid var(--BtnColor);
+    overflow: hidden;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    align-self: flex-start; 
+}
+
+.right {
+    align-self: flex-end; 
+}
+
+.number-box {
+    font-size: 48px;
+    font-weight: bold;
+    display: flex;
+    padding: 0 30px 0 30px;
+    align-items: center;
+}
+
+.card-image img {
     width: 100%;
     height: auto;
-  }
+}
+
+.borderCostum {
+    border-left: var(--BtnColor) 1px solid;
+    width: 100%;
+}
+
+
+
