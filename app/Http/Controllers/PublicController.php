@@ -13,4 +13,15 @@ class PublicController extends Controller
     public function serviceArea(){
         return view('service');
     }
+
+    public function index(){
+        return view('index');
+    }
+    public function prev(){
+        return view('contact');
+    }
+
+    // public function contactSend(Request $request){
+    //     return view('contact');
+    // }
 }
