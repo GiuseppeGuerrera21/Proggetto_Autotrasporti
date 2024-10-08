@@ -1,4 +1,4 @@
-<div class="container container-fluid">
+<div class=" cardContainer container-fluid">
     <div class="card-custom right">
         <div class="card-text d-flex">
             <div class="number-box">

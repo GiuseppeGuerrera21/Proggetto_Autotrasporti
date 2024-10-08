@@ -10,13 +10,13 @@
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ms-auto">
                   <li class="nav-item border-0 border-end border-dark">
-                      <a class="nav-link fw-bold active" aria-current="page" href="#">HOME</a>
+                      <a class="nav-link fw-bold active" aria-current="page" href="{{ route('home')}}">HOME</a>
                   </li>
                   <li class="nav-item border-0 border-end border-dark">
                       <a class="nav-link fw-bold" href="#">CHI SIAMO</a>
                   </li>
                   <li class="nav-item border-0 border-end border-dark">
-                      <a class="nav-link fw-bold" href="#">AREE SERVITE</a>
+                      <a class="nav-link fw-bold" href="{{ route('service')}}">AREE SERVITE</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link fw-bold" href="#">PREVENTIVO</a>
