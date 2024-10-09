@@ -14,8 +14,8 @@ class PublicController extends Controller
         return view('service');
     }
 
-    public function index(){
-        return view('index');
+    public function aboutUs(){
+        return view('aboutUs');
     }
     public function prev(){
         return view('contact');

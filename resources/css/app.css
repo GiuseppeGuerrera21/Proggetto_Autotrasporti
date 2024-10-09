@@ -1,13 +1,14 @@
 @import 'bootstrap';
 
-
-
 :root {
     --BtnColor: #0D4172;
     --BtnHover: #0075e2;
+    --Bg: #001E39;
 }
 *{
     color: var(--BtnColor);
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
 }
 .customSize{
     width: 25px;
@@ -25,18 +26,47 @@
 .btnColor:hover{
     background-color: var(--BtnHover);
 }
+.bg{
+    background-color: var(--Bg);
+}
+.bgBtn{
+    background-color: var(--BtnColor);
+}
+.min-vh-25{
+    min-height: 25vh;
+}
+.min-vh-12{
+    min-height: 12vh;
+}
+.title{
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 video {
     max-width: 100%;
+    width: 100%;
+    height: auto;
+    max-height: 85svh; /* Rimane il massimo, ma puoi modificarlo per una maggiore altezza */
+    aspect-ratio: 14 / 9; /* Imposta l'aspect ratio del video (modifica secondo le tue esigenze) */
+    object-fit: cover; /* Assicura che il video riempia l'area senza distorsione */
 }
-
-/*CAARDS*/
+.imgCostum {
+    width: 100%;  /* L'immagine riempie la larghezza del contenitore */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    object-fit: cover; /* Assicura che l'immagine riempia il contenitore senza distorsione */
+}
+/* SECTION 3 HOMEPAGE*/
+.customPic{
+    width: 100%;
+}
+/*CARDS*/
 .cardContainer {
     display: flex;
     flex-direction: column;
     align-items: center; 
     position: relative;
 }
-
 .card-custom {
     width: 500px;
     border: 1px solid var(--BtnColor);
@@ -45,15 +75,12 @@ video {
     display: flex;
     flex-direction: column;
 }
-
 .left {
     align-self: flex-start; 
 }
-
 .right {
     align-self: flex-end; 
 }
-
 .number-box {
     font-size: 48px;
     font-weight: bold;
@@ -61,43 +88,55 @@ video {
     padding: 0 30px 0 30px;
     align-items: center;
 }
-
 .card-image {
     width: 100%;
     height: auto;
 }
-
 .borderCostum {
     border-left: var(--BtnColor) 1px solid;
     width: 100%;
 }
-
-.imgCostum {
-    width: 55rem;
-    height: 65rem;
+.cardPic{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
-
-.contCostum{
-    background-color: var(--BtnColor);
+/* SERVICE */
+.customLi{
+    color: white;
+    font-size: 20px;
+    margin-left: 40px;
 }
-
-
-/* Service */
-li{
-   color: white;
-   font-size: 20px;
-   margin-left: 40px;
-}
-
-.btnCostumServ {
+.btnCustomServ {
     background-color: white;
-    width: 20rem;
-    margin-top: 100px;
-    margin-left: 30px;
+    width: 19rem;
+    margin-top: 70px;
+    margin-left: 40px;
 }
-
-
-
+.btnCustomServ:hover{
+    background-color: transparent;
+    color: white !important;
+    border: 1px solid white !important;
+}
+.list-square{
+    list-style: square;
+}
+/* FEEDBACKS SEC  */
+.feedContainer{
+    background-image: url('http://127.0.0.1:8000/media/truckRimorchio.webp');
+    width: 100%;
+    height: 45vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.carouselHeight{
+    height: fit-content;
+}
+/* FOOTER  */
+.footerHeight{
+    height: 35vh;
+}
 /* FORM */
 form {
     background-color: white;
@@ -123,21 +162,94 @@ input[type="checkbox"] {
     width: auto;
     margin-right: 10px;
 }
-button {
+.buttonContact {
     padding: 10px 15px;
-    background-color: black;
+    background-color: var(--Bg);
     width: 100%;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
-button:hover {
+.buttonContact:hover {
     background-color: #ffffff;
-    color: black;
+    color: var(--Bg);
+    border: 1px solid var(--Bg);
 }
-
 .cntCs{
     background-image: url('http://127.0.0.1:8000/media/daf.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
 }
+
+/* CARD ABOUT US */
+.cardAU {
+    position: relative;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: var(--BtnColor);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 570px;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+}
+
+.cardHeader .iconBox {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: #005c99;
+    background-color: var(--Bg);
+    margin-right: 10px;
+}
+
+.cardContent {
+    flex-grow: 1;
+    margin-top: 30px;
+}
+
+.cardContent h2 {
+    font-size: 35px;
+    color: #005c99;
+    background-color: var(--Bg);
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cardContent p {
+    font-size: 20px;
+    color: #ffffff;
+    font-family: "Questrial", sans-serif;
+    text-align: center;
+}
+
+.cardFooter {
+    background-color: var(--Bg);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+
+.cardFooter svg {
+    width: 60px; 
+    height: 60px;
+}
+
+
 
